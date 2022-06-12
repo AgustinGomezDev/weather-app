@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icons/lighting/lighting.png" type="image/png">
+    <title>Weather App</title>
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="container-timezone">
+                <p id="country"></p>
+                <p id="region"></p>
+            </div>
+            <div id="container-icon">
+                
+            </div>
+            <div class="container-weather">
+                <p id="temperature"></p>
+                <p id="description"></p>
+                <p id="current-date"></p>
+            </div>
+            <span class="separator"></span>
+            <div class="container-extra-info">
+                <div>
+                    <p id="wind"></p>
+                    <p class="wind">Wind</p>
+                </div>
+                <div>   
+                    <p id="humidity"></p>
+                    <p class="humidity">Humidity</p>
+                </div>
+                <div>
+                    <p id="feels-like"></p>
+                    <p class="feels-like">Feels like</p>
+                </div>
+            </div>
+            <div class="author">
+                <p>App made by <a class="author-link" href="https://github.com/AgustinGomezDev" target="_blank">Agustín Gómez</a></p>
+            </div>
+        </div>
+        <footer class="api">
+            <p class="api-powered"> Powered by <a href="https://www.weatherapi.com/" title="Free Weather API" target="_blank">WeatherAPI.com</a> </p>
+        </footer>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

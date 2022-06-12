@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --primary: #14bef6;
+    --secondary: #0f68f3;
+    --light: #dae9ff;
+    --lightTransparent: rgba(218, 233, 255, 0.3);
+    --white: #ffffff;
+    --black: #010409;
+    --blackTransparent: rgba(1, 4, 9, 0.3);
+    --fLight: 300;
+    --fRegular: 400;
+    --fMedium: 500;
+    --fSemiBold: 600;
+    --fBold: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+}
+
+.container{
+    width: 100%;
+    height: 90%;
+    border-radius: 0 0 25px 25px;
+    background-image: linear-gradient(to top, var(--secondary), var(--primary));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.container-timezone{
+    display: flex;
+    gap: 7px;
+    color: var(--white);
+    font-weight: var(--fMedium);
+    font-size: 30px;
+}
+
+.icon{
+    width: 128px;
+}
+
+.container-weather{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#temperature{
+    font-size: 80px;
+    font-weight: var(--fBold);
+    color: var(--white);
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    z-index: 1;
+    padding: 7px 0;
+}
+
+#temperature:after {
+    content: '\02DA';
+    position: absolute;
+    font-size: 70px;
+    color: var(--light);
+    font-weight: var(--fRegular);
+}
+
+#description{
+    font-size: 25px;
+    font-weight: var(--fMedium);
+    color: var(--white);
+}
+
+#current-date{
+    font-size: 20px;
+    font-weight: var(--fLight);
+    color: var(--light);
+}
+
+.separator{
+    height: 1px;
+    background-color: var(--light);
+    width: 70%;
+}
+
+.container-extra-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.container-extra-info div{
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    background-color: var(--lightTransparent);
+}
+
+#wind, #humidity, #feels-like{
+    font-size: 20px;
+    font-weight: var(--fRegular);
+    color: var(--white);
+    position: relative;
+}
+
+.wind, .humidity, .feels-like{
+    font-size: 15px;
+    font-weight: var(--fLight);
+    color: var(--light);
+}
+
+#feels-like:after {
+    content: '\02DA';
+    position: absolute;
+    font-size: 18px;
+    color: var(--light);
+    font-weight: var(--fRegular);
+}
+
+.author p{
+    color: var(--light);
+    font-size: 15px;
+    padding: 10px;
+}
+
+.author-link{
+    color: var(--white);
+    font-size: 15px;
+    text-decoration: none;
+    position: relative;
+    padding: 3px 0;
+}
+
+.author-link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: var(--light);
+    transform: scaleX(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.author-link:hover::after,
+.author-link:focus::after{
+    transform: scaleX(1);
+}
+
+.api{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.api-powered{
+    font-size: 15px;
+    font-weight: var(--fLight);
+    color: var(--light);
+}
+
+.api-powered a{
+    font-size: 15px;
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    padding: 3px 0;
+}
+
+.api-powered a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: var(--light);
+    transform: scaleX(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.api-powered a:hover::after,
+.api-powered a:focus::after{
+    transform: scaleX(1);
+}
